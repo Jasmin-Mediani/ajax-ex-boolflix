@@ -6,11 +6,6 @@ $(document).ready(function () {
     var templateSchedaFilm = Handlebars.compile(source);
 
 
-    var source = $("#template-hdb-stella").html();
-    var templateStella = Handlebars.compile(source);
-
-
-
     //quando clicco sul bottone, creo una variabile (testoDigitato) che ha il valore digitato nella barra di ricerca. 
     $("#bottone-ricerca").click(function (event) {
         var testoDigitato = $("#barra-ricerca").val().toLowerCase();
