@@ -31,37 +31,62 @@ $(document).ready(function () {
 
                 for (var i = 0; i < films.length; i++) {
                     var film = films[i];
-                    //console.log(film);
+                    var stellePiene = Math.ceil((film.vote_average) / 2) // MEMO: è un numero (arrotondato per eccesso)
                     var infoVisibiliFilm = {
                         titolo: film.title,
                         titoloOriginale: film.original_title,
                         voto: film.vote_average,
                         lingua: film.original_language,
                         filmId: film.id,
-                        //// MILESTONE 2 //////
-                        stelle: Math.ceil((film.vote_average) / 2) // MEMO: è un numero (arrotondato per eccesso)
+                        stella1: "far fa-star",
+                        stella2: "far fa-star",
+                        stella3: "far fa-star",
+                        stella4: "far fa-star",
+                        stella5: "far fa-star",
+
+                        stelle: stellePiene,
                     }
+
+                    // if (stellePiene == 1) {
+                    //     infoVisibiliFilm.stella1 = "fas fa-star";
+                    // } else if (stellePiene == 2) {
+                    //     infoVisibiliFilm.stella1 = "fas fa-star";
+                    //     infoVisibiliFilm.stella2 = "fas fa-star";
+
+                    // } else if (stellePiene == 3) {
+                    //     infoVisibiliFilm.stella1 = "fas fa-star";
+                    //     infoVisibiliFilm.stella2 = "fas fa-star";
+                    //     infoVisibiliFilm.stella3 = "fas fa-star";
+
+                    // } else if (stellePiene == 4) {
+                    //     infoVisibiliFilm.stella1 = "fas fa-star";
+                    //     infoVisibiliFilm.stella2 = "fas fa-star";
+                    //     infoVisibiliFilm.stella3 = "fas fa-star";
+                    //     infoVisibiliFilm.stella4 = "fas fa-star";
+
+                    // } else if (stellePiene == 5) {
+                    //     infoVisibiliFilm.stella1 = "fas fa-star";
+                    //     infoVisibiliFilm.stella2 = "fas fa-star";
+                    //     infoVisibiliFilm.stella3 = "fas fa-star";
+                    //     infoVisibiliFilm.stella4 = "fas fa-star";
+                    //     infoVisibiliFilm.stella5 = "fas fa-star";
+                    // }
+
+                    if (stellePiene > 0)
+                        infoVisibiliFilm.stella1 = "fas fa-star"
+                    if (stellePiene > 1)
+                        infoVisibiliFilm.stella2 = "fas fa-star"
+                    if (stellePiene > 2)
+                        infoVisibiliFilm.stella3 = "fas fa-star"
+                    if (stellePiene > 3)
+                        infoVisibiliFilm.stella4 = "fas fa-star"
+                    if (stellePiene > 4)
+                        infoVisibiliFilm.stella5 = "fas fa-star"
+
+
                     var templateSchedaFilmCompilata = templateSchedaFilm(infoVisibiliFilm);
-                    //console.log(templateSchedaFilmCompilata);
                     $(".contenitore-titoli").append(templateSchedaFilmCompilata);
 
-
-
-                    //////// //// STELLE //////////////
-
-                    $(".card").each(function () {
-                        //console.log($(this).data("id"), infoVisibiliFilm.filmId)
-                        if ($(this).data("identity") == infoVisibiliFilm.filmId) {
-
-                            var stelle = infoVisibiliFilm.stelle; //MEMO: è un numero 
-
-                            for (var i = 0; i < stelle; i++) {
-                                var templateStelleCompilate = templateStella();
-                                $(this).find(".contenitore-stelle").append(templateStelleCompilate);
-                            }
-                        }
-
-                    })
 
                 }
 
