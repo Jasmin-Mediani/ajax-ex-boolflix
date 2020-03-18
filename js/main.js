@@ -33,6 +33,7 @@ $(document).ready(function () {
                         voto: film.vote_average,
                         lingua: film.original_language,
                         filmId: film.id,
+                        copertina: "https://image.tmdb.org/t/p/w185" + film.poster_path, //aggiunto w185 per width immagine
                         stella1: "far fa-star",
                         stella2: "far fa-star",
                         stella3: "far fa-star",
@@ -41,6 +42,8 @@ $(document).ready(function () {
 
                         stelle: stellePiene,
                     }
+
+                    console.log(infoVisibiliFilm.copertina);
 
                     // if (stellePiene == 1) {
                     //     infoVisibiliFilm.stella1 = "fas fa-star";
@@ -81,6 +84,40 @@ $(document).ready(function () {
 
                     var templateSchedaFilmCompilata = templateSchedaFilm(infoVisibiliFilm);
                     $(".contenitore-titoli").append(templateSchedaFilmCompilata);
+
+
+
+                    ///// INFO A COMPARSA SULLA CARD ////////
+
+
+                    $(".card").mouseenter(function () {
+                        $(".card").find("h4").hide();
+                        $(".card").find("h3").hide();
+                        $(".card").find(".contenitore-stelle").hide();
+
+
+                        $(this).find("h4").show();
+                        $(this).find("h3").show();
+                        $(this).find(".contenitore-stelle").show();
+
+
+                    });
+
+                    $(".card").mouseleave(function () {
+                        $(".card").find("h4").hide();
+                        $(".card").find("h3").hide();
+                        $(".card").find(".contenitore-stelle").hide();
+
+
+                    });
+
+                    $(".card").find(".contenitore-stelle").hide(); //così compare solo con l'hover sulla card
+
+
+                    ////////////////////////////// 
+
+                    var copertina = infoVisibiliFilm.copertina;
+
 
 
                 }
