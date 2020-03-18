@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container-fw {
+  background-color: rgb(20, 20, 20);
+  min-height: 100vh;
+  width: 100vw;
+}
+
+.contenitore-titoli {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  min-height: 100px;
+  background-color: pink;
+  margin-top: 50px;
+}
+
+.card {
+  height: 300px;
+  width: 200px;
+  border: 1px solid yellow;
+}
+
+.contenitore-stelle {
+  height: 40px;
+  width: 100%;
+  background-color: red;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}

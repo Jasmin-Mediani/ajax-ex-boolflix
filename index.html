@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/e6ac989c9a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <title>Boolflix</title>
+  </head>
+  <body>
+    <div class="container-fw">
+      <input id="barra-ricerca" type="text" />
+      <button id="bottone-ricerca">cerca film</button>
+
+      <div class="contenitore-titoli"></div>
+    </div>
+
+    <!------- template delle cards handlebars ------->
+    <script id="template-hdb-film" type="text/x-handlebars-template">
+      <div class="card" data-identity="{{filmId}}">
+          <h3>{{titolo}}</h3>
+          <h4>{{titoloOriginale}}</h4>
+          <h4>{{voto}}</h4>
+          <h4>{{lingua}}</h4>
+          <div class="contenitore-stelle">
+          </div>
+      </div>
+    </script>
+
+    <script src="js/main.js"></script>
+    <!--------------- template delle stelle, da appendere in .contenitore-stelle --------------->
+    <script id="template-hdb-stella" type="text/x-handlebars-template">
+      <i class="far fa-star"></i>
+    </script>
+  </body>
+</html>
