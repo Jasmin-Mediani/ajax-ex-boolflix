@@ -73,15 +73,15 @@ $(document).ready(function () {
                     // }
 
                     if (stellePiene > 0)
-                        infoVisibiliFilm.stella1 = "fas fa-star"
+                        infoVisibiliFilm.stella1 = "fas fa-star";
                     if (stellePiene > 1)
-                        infoVisibiliFilm.stella2 = "fas fa-star"
+                        infoVisibiliFilm.stella2 = "fas fa-star";
                     if (stellePiene > 2)
-                        infoVisibiliFilm.stella3 = "fas fa-star"
+                        infoVisibiliFilm.stella3 = "fas fa-star";
                     if (stellePiene > 3)
-                        infoVisibiliFilm.stella4 = "fas fa-star"
+                        infoVisibiliFilm.stella4 = "fas fa-star";
                     if (stellePiene > 4)
-                        infoVisibiliFilm.stella5 = "fas fa-star"
+                        infoVisibiliFilm.stella5 = "fas fa-star";
 
 
                     var templateSchedaFilmCompilata = templateSchedaFilm(infoVisibiliFilm);

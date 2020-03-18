@@ -7,7 +7,7 @@
 .container-fw {
   background-color: rgb(20, 20, 20);
   min-height: 100vh;
-  width: 100vw;
+  width: 100%;
 }
 
 .contenitore-titoli {
@@ -17,21 +17,45 @@
   flex-direction: row;
   flex-wrap: wrap;
   min-height: 100px;
-  background-color: pink;
   margin-top: 50px;
+  justify-content: center;
 }
 
 .card {
   height: 300px;
   width: 200px;
-  border: 1px solid yellow;
+  background-color: teal;
+  position: relative; /* per absolute di .contenitore-stelle */
+  margin: 30px;
+  color: whitesmoke;
+}
+
+.card h4,
+.card h3 {
+  padding: 10px;
 }
 
 .contenitore-stelle {
   height: 40px;
   width: 100%;
-  background-color: red;
+  background-color: rgb(185, 75, 75);
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#barra-ricerca {
+  margin: 25px 0px 25px 30px;
+  height: 25px;
+  font-size: 14px;
+}
+
+#bottone-ricerca {
+  height: 25px;
+  width: 100px;
 }
