@@ -47,7 +47,7 @@ $(document).ready(function () {
 
 
 
-
+                    //////////////// BANDIERE IN BASE ALLA LINGUA ORIGINALE ////////////////
 
                     switch (film.original_language) {
                         case "en":
@@ -74,37 +74,17 @@ $(document).ready(function () {
                             infoVisibiliFilm.lingua = "/bandiere/spain-flag-icon-64.png";
                             break;
 
+                        case "ru":
+                            infoVisibiliFilm.lingua = "/bandiere/russia-flag-icon-64.png";
+                            break;
+
+
                         default:
                     }
 
 
 
-                    console.log(film);
-
-                    // if (stellePiene == 1) {
-                    //     infoVisibiliFilm.stella1 = "fas fa-star";
-                    // } else if (stellePiene == 2) {
-                    //     infoVisibiliFilm.stella1 = "fas fa-star";
-                    //     infoVisibiliFilm.stella2 = "fas fa-star";
-
-                    // } else if (stellePiene == 3) {
-                    //     infoVisibiliFilm.stella1 = "fas fa-star";
-                    //     infoVisibiliFilm.stella2 = "fas fa-star";
-                    //     infoVisibiliFilm.stella3 = "fas fa-star";
-
-                    // } else if (stellePiene == 4) {
-                    //     infoVisibiliFilm.stella1 = "fas fa-star";
-                    //     infoVisibiliFilm.stella2 = "fas fa-star";
-                    //     infoVisibiliFilm.stella3 = "fas fa-star";
-                    //     infoVisibiliFilm.stella4 = "fas fa-star";
-
-                    // } else if (stellePiene == 5) {
-                    //     infoVisibiliFilm.stella1 = "fas fa-star";
-                    //     infoVisibiliFilm.stella2 = "fas fa-star";
-                    //     infoVisibiliFilm.stella3 = "fas fa-star";
-                    //     infoVisibiliFilm.stella4 = "fas fa-star";
-                    //     infoVisibiliFilm.stella5 = "fas fa-star";
-                    // }
+                    ////////////////////  STELLE da 1 a 5 IN BASE AL VOTO ////////////
 
                     /*switch (stellePiene) {
                         case 1:
@@ -137,6 +117,34 @@ $(document).ready(function () {
                     } */
 
 
+
+
+                    /*
+                    if (stellePiene == 1) {
+                        infoVisibiliFilm.stella1 = "fas fa-star";
+                    } else if (stellePiene == 2) {
+                        infoVisibiliFilm.stella1 = "fas fa-star";
+                        infoVisibiliFilm.stella2 = "fas fa-star";
+
+                    } else if (stellePiene == 3) {
+                        infoVisibiliFilm.stella1 = "fas fa-star";
+                        infoVisibiliFilm.stella2 = "fas fa-star";
+                        infoVisibiliFilm.stella3 = "fas fa-star";
+
+                    } else if (stellePiene == 4) {
+                        infoVisibiliFilm.stella1 = "fas fa-star";
+                        infoVisibiliFilm.stella2 = "fas fa-star";
+                        infoVisibiliFilm.stella3 = "fas fa-star";
+                        infoVisibiliFilm.stella4 = "fas fa-star";
+
+                    } else if (stellePiene == 5) {
+                        infoVisibiliFilm.stella1 = "fas fa-star";
+                        infoVisibiliFilm.stella2 = "fas fa-star";
+                        infoVisibiliFilm.stella3 = "fas fa-star";
+                        infoVisibiliFilm.stella4 = "fas fa-star";
+                        infoVisibiliFilm.stella5 = "fas fa-star";
+                    }
+                    */
 
 
 
@@ -188,7 +196,7 @@ $(document).ready(function () {
                     $(".card").find(".contenitore-stelle").hide(); //così compare solo con l'hover sulla card
 
 
-                    ////////////////////////////// 
+
 
                     var copertina = infoVisibiliFilm.copertina;
 
