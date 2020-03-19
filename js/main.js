@@ -26,6 +26,7 @@ $(document).ready(function () {
 
                 for (var i = 0; i < films.length; i++) {
                     var film = films[i];
+
                     var stellePiene = Math.ceil((film.vote_average) / 2) // MEMO: è un numero (arrotondato per eccesso)
                     var infoVisibiliFilm = {
                         titolo: film.title,
@@ -44,6 +45,10 @@ $(document).ready(function () {
                     }
 
 
+
+
+
+
                     switch (film.original_language) {
                         case "en":
                             infoVisibiliFilm.lingua = "/bandiere/united-kingdom-flag-icon-64.png";
@@ -54,14 +59,14 @@ $(document).ready(function () {
                         case "fr":
                             infoVisibiliFilm.lingua = "/bandiere/france-flag-icon-64.png";
                             break;
-                        case "jp":
+                        case "ja":
                             infoVisibiliFilm.lingua = "/bandiere/japan-flag-icon-64.png";
                             break;
                         case "de":
                             infoVisibiliFilm.lingua = "/bandiere/germany-flag-icon-64.png";
                             break;
 
-                        case "cn":
+                        case "zh":
                             infoVisibiliFilm.lingua = "/bandiere/china-flag-icon-64.png";
                             break;
 
@@ -74,7 +79,7 @@ $(document).ready(function () {
 
 
 
-                    console.log(infoVisibiliFilm.copertina);
+                    console.log(film);
 
                     // if (stellePiene == 1) {
                     //     infoVisibiliFilm.stella1 = "fas fa-star";
@@ -158,12 +163,14 @@ $(document).ready(function () {
 
                     $(".card").mouseenter(function () {
                         $(".card").find("h4").hide();
+                        $(".card").find(".lingua").hide();
                         $(".card").find("h3").hide();
                         $(".card").find(".contenitore-stelle").hide();
 
 
                         $(this).find("h4").show();
                         $(this).find("h3").show();
+                        $(this).find(".lingua").show();
                         $(this).find(".contenitore-stelle").show();
 
 
@@ -172,6 +179,7 @@ $(document).ready(function () {
                     $(".card").mouseleave(function () {
                         $(".card").find("h4").hide();
                         $(".card").find("h3").hide();
+                        $(".card").find(".lingua").hide();
                         $(".card").find(".contenitore-stelle").hide();
 
 
@@ -184,12 +192,7 @@ $(document).ready(function () {
 
                     var copertina = infoVisibiliFilm.copertina;
 
-
-
                 }
-
-
-
 
 
             },
@@ -197,46 +200,11 @@ $(document).ready(function () {
                 alert("C\' è un rrore nel caricamento della pagina");
             }
 
-
-
         });
-
-
-
-
-
-
-
-
 
 
     });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 });
 
-
-
-//https://api.themoviedb.org/3/search/movie?api_key=<<api_key>>&language=en-US&page=1&include_adult=false
