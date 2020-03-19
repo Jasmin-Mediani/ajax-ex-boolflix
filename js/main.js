@@ -70,6 +70,40 @@ $(document).ready(function () {
                     //     infoVisibiliFilm.stella5 = "fas fa-star";
                     // }
 
+                    /*switch (stellePiene) {
+                        case 1:
+                            infoVisibiliFilm.stella1 = "fas fa-star";
+                            break;
+                        case 2:
+                            infoVisibiliFilm.stella1 = "fas fa-star";
+                            infoVisibiliFilm.stella2 = "fas fa-star";
+                            break;
+                        case 3:
+                            infoVisibiliFilm.stella1 = "fas fa-star";
+                            infoVisibiliFilm.stella2 = "fas fa-star";
+                            infoVisibiliFilm.stella3 = "fas fa-star";
+                            break;
+                        case 4:
+                            infoVisibiliFilm.stella1 = "fas fa-star";
+                            infoVisibiliFilm.stella2 = "fas fa-star";
+                            infoVisibiliFilm.stella3 = "fas fa-star";
+                            infoVisibiliFilm.stella4 = "fas fa-star";
+                            break;
+                        case 5:
+                            infoVisibiliFilm.stella1 = "fas fa-star";
+                            infoVisibiliFilm.stella2 = "fas fa-star";
+                            infoVisibiliFilm.stella3 = "fas fa-star";
+                            infoVisibiliFilm.stella4 = "fas fa-star";
+                            infoVisibiliFilm.stella5 = "fas fa-star";
+                            break;
+
+                        default:
+                    } */
+
+
+
+
+
                     if (stellePiene > 0)
                         infoVisibiliFilm.stella1 = "fas fa-star";
                     if (stellePiene > 1)
@@ -80,6 +114,7 @@ $(document).ready(function () {
                         infoVisibiliFilm.stella4 = "fas fa-star";
                     if (stellePiene > 4)
                         infoVisibiliFilm.stella5 = "fas fa-star";
+
 
 
                     var templateSchedaFilmCompilata = templateSchedaFilm(infoVisibiliFilm);
