@@ -41,11 +41,16 @@
   margin-top: 80px;
 }
 .card .voto-su-10 {
-  margin-top: 140px;
+  margin-top: 150px;
 }
 
 .card .lingua {
-  margin-top: 180px;
+  margin-top: 190px;
+}
+
+.card .lingua img {
+  height: 20px;
+  width: 30px;
 }
 
 .card img {

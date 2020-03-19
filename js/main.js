@@ -31,7 +31,7 @@ $(document).ready(function () {
                         titolo: film.title,
                         titoloOriginale: film.original_title,
                         voto: film.vote_average,
-                        lingua: film.original_language,
+                        lingua: /*film.original_language,*/ "",
                         filmId: film.id,
                         copertina: "https://image.tmdb.org/t/p/w185" + film.poster_path, //aggiunto w185 per width immagine
                         stella1: "far fa-star",
@@ -42,6 +42,37 @@ $(document).ready(function () {
 
                         stelle: stellePiene,
                     }
+
+
+                    switch (film.original_language) {
+                        case "en":
+                            infoVisibiliFilm.lingua = "/bandiere/united-kingdom-flag-icon-64.png";
+                            break;
+                        case "it":
+                            infoVisibiliFilm.lingua = "/bandiere/italy-flag-icon-64.png";
+                            break;
+                        case "fr":
+                            infoVisibiliFilm.lingua = "/bandiere/france-flag-icon-64.png";
+                            break;
+                        case "jp":
+                            infoVisibiliFilm.lingua = "/bandiere/japan-flag-icon-64.png";
+                            break;
+                        case "de":
+                            infoVisibiliFilm.lingua = "/bandiere/germany-flag-icon-64.png";
+                            break;
+
+                        case "cn":
+                            infoVisibiliFilm.lingua = "/bandiere/china-flag-icon-64.png";
+                            break;
+
+                        case "es":
+                            infoVisibiliFilm.lingua = "/bandiere/spain-flag-icon-64.png";
+                            break;
+
+                        default:
+                    }
+
+
 
                     console.log(infoVisibiliFilm.copertina);
 
