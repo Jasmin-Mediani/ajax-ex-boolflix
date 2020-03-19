@@ -82,42 +82,7 @@ $(document).ready(function () {
                         default:
                     }
 
-
-
-                    ////////////////////  STELLE da 1 a 5 IN BASE AL VOTO ////////////
-
-                    /*switch (stellePiene) {
-                        case 1:
-                            infoVisibiliFilm.stella1 = "fas fa-star";
-                            break;
-                        case 2:
-                            infoVisibiliFilm.stella1 = "fas fa-star";
-                            infoVisibiliFilm.stella2 = "fas fa-star";
-                            break;
-                        case 3:
-                            infoVisibiliFilm.stella1 = "fas fa-star";
-                            infoVisibiliFilm.stella2 = "fas fa-star";
-                            infoVisibiliFilm.stella3 = "fas fa-star";
-                            break;
-                        case 4:
-                            infoVisibiliFilm.stella1 = "fas fa-star";
-                            infoVisibiliFilm.stella2 = "fas fa-star";
-                            infoVisibiliFilm.stella3 = "fas fa-star";
-                            infoVisibiliFilm.stella4 = "fas fa-star";
-                            break;
-                        case 5:
-                            infoVisibiliFilm.stella1 = "fas fa-star";
-                            infoVisibiliFilm.stella2 = "fas fa-star";
-                            infoVisibiliFilm.stella3 = "fas fa-star";
-                            infoVisibiliFilm.stella4 = "fas fa-star";
-                            infoVisibiliFilm.stella5 = "fas fa-star";
-                            break;
-
-                        default:
-                    } */
-
-
-
+                    /////////////////////// STELLE IN BASE AL VOTO /////////////////////
 
                     /*
                     if (stellePiene == 1) {
