@@ -24,18 +24,18 @@
     <!------- template delle cards handlebars ------->
     <script id="template-hdb-film" type="text/x-handlebars-template">
       <div class="card" data-identity="{{filmId}}">
-
-          <h3>{{titolo}}</h3>
-          <h4 class="titolo-originale">{{titoloOriginale}}</h4>
-          <h4 class="voto-su-10">voto: {{voto}}/10</h4>
-          <h4 class="lingua"><img src="{{lingua}}" alt=""></h4>
+          <div class="contenitore-info">
+            <h3>{{titolo}}</h3>
+            <h4 class="titolo-originale">{{titoloOriginale}}</h4>
+            <h4 class="voto-su-10">voto: {{voto}}/10</h4>
+            <h4 class="lingua"><img src="{{lingua}}" alt=""></h4>
+          </div>
           <div class="contenitore-stelle">
             <i class="{{stella1}}"></i>
             <i class="{{stella2}}"></i>
             <i class="{{stella3}}"></i>
             <i class="{{stella4}}"></i>
             <i class="{{stella5}}"></i>
-
           </div>
           <img src="{{copertina}}" alt="">
       </div>
