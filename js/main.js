@@ -2,13 +2,35 @@ $(document).ready(function () {
 
 
 
-    ///////////////// RICERCA DI FILM /////////////////
+    ///////////////// RICERCA DI FILM E SERIE TV INSIEME/////////////////
 
     var source = $("#template-hdb-film").html();
     var templateSchedaFilm = Handlebars.compile(source);
 
 
     //quando clicco sul bottone, creo una variabile (testoDigitato) che ha il valore digitato nella barra di ricerca. 
+
+    $("#bottone-ricerca").click(function () {
+        cercaFilm();
+        cercaSerieTv();
+        $("#barra-ricerca").val("");
+        $(".contenitore-titoli").children(".card").remove(); // così resta in vista solo la serie/saga appena cercata
+    });
+
+
+    $("#barra-ricerca").keypress(function () {
+        if (event.key == "Enter") {
+            cercaFilm();
+            cercaSerieTv();
+            $(".contenitore-titoli").children(".card").remove(); // così resta in vista solo la serie/saga appena cercata
+        }
+    });
+
+
+
+    /////// RICERCA DI FILM A PARTE ///////////// 
+
+    /*
 
     $("#bottone-ricerca").click(function () {
         cercaFilm();
@@ -22,10 +44,12 @@ $(document).ready(function () {
         }
     });
 
+    */
 
 
+    ///////////////// RICERCA DI SERIE TV  a parte ////////////////
 
-    ///////////////// RICERCA DI SERIE TV ////////////////
+    /*
 
     $("#bottone-ricerca").click(function () {
         cercaSerieTv();
@@ -38,6 +62,8 @@ $(document).ready(function () {
             cercaSerieTv();
         }
     });
+    
+    */
 
 
 
@@ -48,6 +74,8 @@ $(document).ready(function () {
     function cercaSerieTv() {
         var testoDigitato = $("#barra-ricerca").val().toLowerCase();
         var apiUrlBase = "https://api.themoviedb.org/3";
+
+
         $.ajax({
 
             url: apiUrlBase + '/search/tv',
@@ -59,7 +87,8 @@ $(document).ready(function () {
             method: "GET",
             success: function (infoInArrivo) {
                 var films = infoInArrivo.results;
-                $(".contenitore-titoli").children(".card").remove(); // così resta in vista solo la serie/saga appena cercata
+                //$(".contenitore-titoli").children(".card").remove(); // così resta in vista solo la serie/saga appena cercata
+
 
                 for (var i = 0; i < films.length; i++) {
                     var film = films[i];
@@ -194,7 +223,7 @@ $(document).ready(function () {
             method: "GET",
             success: function (infoInArrivo) {
                 var films = infoInArrivo.results;
-                $(".contenitore-titoli").children(".card").remove(); // così resta in vista solo la serie/saga appena cercata
+                //$(".contenitore-titoli").children(".card").remove(); // così resta in vista solo la serie/saga appena cercata
 
                 for (var i = 0; i < films.length; i++) {
                     var film = films[i];

@@ -89,7 +89,9 @@
 
 #bottone-ricerca {
   height: 25px;
-  width: 100px;
+  width: 150px;
+  border-radius: 5px;
+  border: none;
 }
 
 .card img:hover {
