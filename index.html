@@ -10,7 +10,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"></script>
     <link rel="stylesheet" href="css/style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
     <title>Boolflix</title>
   </head>
   <body>
@@ -26,10 +25,11 @@
       <div class="card" data-identity="{{filmId}}">
           <div class="contenitore-info">
                 <h3>{{titolo}}</h3>
-                <h4 class="titolo-originale">{{titoloOriginale}}</h4>
+                <h4 class="titolo-originale"> ( {{titoloOriginale}} )</h4>
                 <!--<h4 class="voto-su-10">voto: {{voto}}/10</h4> -->
                 <div class="lingua">
-                    <img src="{{lingua}}" alt="">
+                    <img src="{{bandiera}}" alt="">
+                    <span>lingua: {{lingua}}</span>
                 </div>
           </div>
           <div class="contenitore-stelle">

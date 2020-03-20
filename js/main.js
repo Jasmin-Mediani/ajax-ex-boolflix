@@ -1,7 +1,4 @@
 $(document).ready(function () {
-
-
-
     ///////////////// RICERCA DI FILM E SERIE TV INSIEME/////////////////
 
     var source = $("#template-hdb-film").html();
@@ -100,6 +97,7 @@ $(document).ready(function () {
                         voto: film.vote_average,
                         lingua: /*film.original_language,*/ "",
                         filmId: film.id,
+                        bandiera: "",
                         copertina: "https://image.tmdb.org/t/p/w185" + film.poster_path, //aggiunto w185 per width immagine
                         stella1: "far fa-star",
                         stella2: "far fa-star",
@@ -110,41 +108,44 @@ $(document).ready(function () {
                         stelle: stellePiene,
                     }
 
+                    console.log(film);
+
 
 
                     //////////////// BANDIERE IN BASE ALLA LINGUA ORIGINALE ////////////////
 
                     switch (film.original_language) {
                         case "en":
-                            infoVisibiliFilm.lingua = "/bandiere/united-kingdom-flag-icon-64.png";
+                            infoVisibiliFilm.bandiera = "/bandiere/united-kingdom-flag-icon-64.png";
                             break;
                         case "it":
-                            infoVisibiliFilm.lingua = "/bandiere/italy-flag-icon-64.png";
+                            infoVisibiliFilm.bandiera = "/bandiere/italy-flag-icon-64.png";
                             break;
                         case "fr":
-                            infoVisibiliFilm.lingua = "/bandiere/france-flag-icon-64.png";
+                            infoVisibiliFilm.bandiera = "/bandiere/france-flag-icon-64.png";
                             break;
                         case "ja":
-                            infoVisibiliFilm.lingua = "/bandiere/japan-flag-icon-64.png";
+                            infoVisibiliFilm.bandiera = "/bandiere/japan-flag-icon-64.png";
                             break;
                         case "de":
-                            infoVisibiliFilm.lingua = "/bandiere/germany-flag-icon-64.png";
+                            infoVisibiliFilm.bandiera = "/bandiere/germany-flag-icon-64.png";
                             break;
 
                         case "zh":
-                            infoVisibiliFilm.lingua = "/bandiere/china-flag-icon-64.png";
+                            infoVisibiliFilm.bandiera = "/bandiere/china-flag-icon-64.png";
                             break;
 
                         case "es":
-                            infoVisibiliFilm.lingua = "/bandiere/spain-flag-icon-64.png";
+                            infoVisibiliFilm.bandiera = "/bandiere/spain-flag-icon-64.png";
                             break;
 
                         case "ru":
-                            infoVisibiliFilm.lingua = "/bandiere/russia-flag-icon-64.png";
+                            infoVisibiliFilm.bandiera = "/bandiere/russia-flag-icon-64.png";
                             break;
 
 
-                        default: film.original_language
+                        default: infoVisibiliFilm.lingua = film.original_language;
+                            break;
                     }
 
                     /////////////////////// STELLE IN BASE AL VOTO /////////////////////
@@ -252,35 +253,37 @@ $(document).ready(function () {
 
                     switch (film.original_language) {
                         case "en":
-                            infoVisibiliFilm.lingua = "/bandiere/united-kingdom-flag-icon-64.png";
+                            infoVisibiliFilm.bandiera = "/bandiere/united-kingdom-flag-icon-64.png";
                             break;
                         case "it":
-                            infoVisibiliFilm.lingua = "/bandiere/italy-flag-icon-64.png";
+                            infoVisibiliFilm.bandiera = "/bandiere/italy-flag-icon-64.png";
                             break;
                         case "fr":
-                            infoVisibiliFilm.lingua = "/bandiere/france-flag-icon-64.png";
+                            infoVisibiliFilm.bandiera = "/bandiere/france-flag-icon-64.png";
                             break;
                         case "ja":
-                            infoVisibiliFilm.lingua = "/bandiere/japan-flag-icon-64.png";
+                            infoVisibiliFilm.bandiera = "/bandiere/japan-flag-icon-64.png";
                             break;
                         case "de":
-                            infoVisibiliFilm.lingua = "/bandiere/germany-flag-icon-64.png";
+                            infoVisibiliFilm.bandiera = "/bandiere/germany-flag-icon-64.png";
                             break;
 
                         case "zh":
-                            infoVisibiliFilm.lingua = "/bandiere/china-flag-icon-64.png";
+                            infoVisibiliFilm.bandiera = "/bandiere/china-flag-icon-64.png";
                             break;
 
                         case "es":
-                            infoVisibiliFilm.lingua = "/bandiere/spain-flag-icon-64.png";
+                            infoVisibiliFilm.bandiera = "/bandiere/spain-flag-icon-64.png";
                             break;
 
                         case "ru":
-                            infoVisibiliFilm.lingua = "/bandiere/russia-flag-icon-64.png";
+                            infoVisibiliFilm.bandiera = "/bandiere/russia-flag-icon-64.png";
                             break;
 
 
                         default:
+                            infoVisibiliFilm.bandiera = film.original_language;
+                            break;
                     }
 
                     /////////////////////// STELLE IN BASE AL VOTO /////////////////////
