@@ -10,6 +10,12 @@
   width: 100%;
 }
 
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .contenitore-titoli {
   width: 80%;
   margin: 0 auto;
@@ -39,7 +45,7 @@
   display: none;
 }
 
-.card img {
+.card .copertina {
   height: 278px; /*provvisoria*/
   max-width: 185px; /* è un fix, perché l'immagine fornita da moviesdb non è sempre w185px anche quando dovrebbe. Es: signore degli anelli*/
   position: absolute;
@@ -51,17 +57,21 @@
   justify-content: space-evenly;
 }
 
-.contenitore-info .lingua {
+.card .contenitore-info .lingua {
   display: none;
-  height: auto;
   margin-left: 10px;
   margin-right: 10px;
+  position: relative;
 }
 
-.contenitore-info .lingua img {
+.contenitore-info .lingua span {
+  float: left;
+}
+
+.contenitore-info .lingua .bandiera {
   height: 20px;
   width: 30px;
-  margin-left: 50px;
+  margin-left: 5px;
 }
 
 .contenitore-stelle {
