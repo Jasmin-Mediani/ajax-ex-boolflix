@@ -116,31 +116,31 @@ $(document).ready(function () {
 
                     switch (film.original_language) {
                         case "en":
-                            infoVisibiliFilm.bandiera = "/bandiere/united-kingdom-flag-icon-64.png";
+                            infoVisibiliFilm.bandiera = "bandiere/united-kingdom-flag-icon-64.png";
                             break;
                         case "it":
-                            infoVisibiliFilm.bandiera = "/bandiere/italy-flag-icon-64.png";
+                            infoVisibiliFilm.bandiera = "bandiere/italy-flag-icon-64.png";
                             break;
                         case "fr":
-                            infoVisibiliFilm.bandiera = "/bandiere/france-flag-icon-64.png";
+                            infoVisibiliFilm.bandiera = "bandiere/france-flag-icon-64.png";
                             break;
                         case "ja":
-                            infoVisibiliFilm.bandiera = "/bandiere/japan-flag-icon-64.png";
+                            infoVisibiliFilm.bandiera = "bandiere/japan-flag-icon-64.png";
                             break;
                         case "de":
-                            infoVisibiliFilm.bandiera = "/bandiere/germany-flag-icon-64.png";
+                            infoVisibiliFilm.bandiera = "bandiere/germany-flag-icon-64.png";
                             break;
 
                         case "zh":
-                            infoVisibiliFilm.bandiera = "/bandiere/china-flag-icon-64.png";
+                            infoVisibiliFilm.bandiera = "bandiere/china-flag-icon-64.png";
                             break;
 
                         case "es":
-                            infoVisibiliFilm.bandiera = "/bandiere/spain-flag-icon-64.png";
+                            infoVisibiliFilm.bandiera = "bandiere/spain-flag-icon-64.png";
                             break;
 
                         case "ru":
-                            infoVisibiliFilm.bandiera = "/bandiere/russia-flag-icon-64.png";
+                            infoVisibiliFilm.bandiera = "bandiere/russia-flag-icon-64.png";
                             break;
 
 
@@ -253,31 +253,31 @@ $(document).ready(function () {
 
                     switch (film.original_language) {
                         case "en":
-                            infoVisibiliFilm.bandiera = "/bandiere/united-kingdom-flag-icon-64.png";
+                            infoVisibiliFilm.bandiera = "bandiere/united-kingdom-flag-icon-64.png";
                             break;
                         case "it":
-                            infoVisibiliFilm.bandiera = "/bandiere/italy-flag-icon-64.png";
+                            infoVisibiliFilm.bandiera = "bandiere/italy-flag-icon-64.png";
                             break;
                         case "fr":
-                            infoVisibiliFilm.bandiera = "/bandiere/france-flag-icon-64.png";
+                            infoVisibiliFilm.bandiera = "bandiere/france-flag-icon-64.png";
                             break;
                         case "ja":
-                            infoVisibiliFilm.bandiera = "/bandiere/japan-flag-icon-64.png";
+                            infoVisibiliFilm.bandiera = "bandiere/japan-flag-icon-64.png";
                             break;
                         case "de":
-                            infoVisibiliFilm.bandiera = "/bandiere/germany-flag-icon-64.png";
+                            infoVisibiliFilm.bandiera = "bandiere/germany-flag-icon-64.png";
                             break;
 
                         case "zh":
-                            infoVisibiliFilm.bandiera = "/bandiere/china-flag-icon-64.png";
+                            infoVisibiliFilm.bandiera = "bandiere/china-flag-icon-64.png";
                             break;
 
                         case "es":
-                            infoVisibiliFilm.bandiera = "/bandiere/spain-flag-icon-64.png";
+                            infoVisibiliFilm.bandiera = "bandiere/spain-flag-icon-64.png";
                             break;
 
                         case "ru":
-                            infoVisibiliFilm.bandiera = "/bandiere/russia-flag-icon-64.png";
+                            infoVisibiliFilm.bandiera = "bandiere/russia-flag-icon-64.png";
                             break;
 
 
