@@ -47,7 +47,7 @@
 
 .card .copertina {
   height: 278px; /*provvisoria*/
-  max-width: 185px; /* è un fix, perché l'immagine fornita da moviesdb non è sempre w185px anche quando dovrebbe. Es: signore degli anelli*/
+  width: 185px; /* è un fix, perché l'immagine fornita da moviesdb non è sempre w185px anche quando dovrebbe. Es: signore degli anelli*/
   position: absolute;
 }
 

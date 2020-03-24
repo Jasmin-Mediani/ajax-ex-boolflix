@@ -108,6 +108,10 @@ $(document).ready(function () {
                         stelle: stellePiene,
                     }
 
+                    if (film.poster_path == null) {
+                        infoVisibiliFilm.copertina = "https://www.clbdog.it/uploads/images/1551704103_no_poster.png";
+                    }
+
                     console.log(film);
 
 
@@ -244,10 +248,14 @@ $(document).ready(function () {
                         stella5: "far fa-star",
 
                         stelle: stellePiene,
+
+
                     }
 
 
-
+                    if (film.poster_path == null) {
+                        infoVisibiliFilm.copertina = "https://www.clbdog.it/uploads/images/1551704103_no_poster.png";
+                    }
 
                     //////////////// BANDIERE IN BASE ALLA LINGUA ORIGINALE ////////////////
 
