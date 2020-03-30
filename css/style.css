@@ -79,6 +79,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  border: 1px solid red;
 }
 
 .card .contenitore-info .lingua {
