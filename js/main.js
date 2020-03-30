@@ -4,6 +4,11 @@ $(document).ready(function () {
     var source = $("#template-hdb-film").html();
     var templateSchedaFilm = Handlebars.compile(source);
 
+    var source2 = $("#template-attore").html();
+    var templateAttore = Handlebars.compile(source2);
+
+
+
 
     //quando clicco sul bottone, creo una variabile (testoDigitato) che ha il valore digitato nella barra di ricerca. 
 
@@ -112,7 +117,7 @@ $(document).ready(function () {
                         infoVisibiliFilm.copertina = "https://www.clbdog.it/uploads/images/1551704103_no_poster.png";
                     }
 
-                    console.log(film);
+                    //console.log(film);
 
 
 
@@ -211,6 +216,8 @@ $(document).ready(function () {
             }
 
         });
+
+
 
     }
 
@@ -343,7 +350,48 @@ $(document).ready(function () {
 
                     $(".card").find(".contenitore-stelle").hide(); //così compare solo con l'hover sulla card
 
+
+                    /// RICHIESTA PER IL CAST ///
+
+                    $.ajax({
+                        url: apiUrlBase + "/movie/" + infoVisibiliFilm.filmId + "/credits",
+                        data: {
+                            api_key: "bf6da085b921b2474703466befcb39eb",
+                            /*query: testoDigitato,*/
+                        },
+                        method: "GET",
+                        success: function (infoArrivate) {
+                            var castTutto = infoArrivate.cast; //array di oggetti
+                            for (var i = 0; i < Math.min(castTutto.length, 5); i++) { //prende il valore minimo tra 5 e la lunghezza del cast (check per film con meno di 5 attori//
+                                var castSingolo = castTutto[i];
+                                var nomeAttore = {
+                                    nome: castSingolo.name,
+                                }
+
+
+                                $(".card").each(function () {
+                                    var templateAttoreCompilato = templateAttore(nomeAttore);
+                                    if ($(this).data("identity") == infoArrivate.id) {
+                                        console.log($(this).data("identity"), infoArrivate.id)
+                                        $(templateAttoreCompilato).insertBefore($(this).find(".lingua"));
+
+                                    }
+
+                                });
+
+                            }
+
+                        },
+
+                        error: function (errore) {
+                            alert("C\' è un errore nel caricamento della pagina");
+                        }
+
+                    });
                 }
+
+
+
 
 
             },
@@ -352,6 +400,8 @@ $(document).ready(function () {
             }
 
         });
+
+
 
     }
 

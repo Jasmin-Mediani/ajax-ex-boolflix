@@ -27,12 +27,11 @@ header {
 }
 
 .box2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 25px;
 }
-
 
 .logo h2 {
   font-size: 40px;
@@ -91,12 +90,14 @@ header {
 
 .contenitore-info .lingua span {
   float: left;
+  margin-top: 5px;
 }
 
 .contenitore-info .lingua .bandiera {
   height: 20px;
   width: 30px;
   margin-left: 5px;
+  margin-top: 5px;
 }
 
 .contenitore-stelle {
@@ -131,4 +132,12 @@ header {
 
 .card img:hover {
   opacity: 0.15;
+}
+
+.cast {
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  padding-bottom: 2px;
+  padding-left: 10px;
 }
