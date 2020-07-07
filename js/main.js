@@ -15,7 +15,7 @@ $(document).ready(function () {
     $("#bottone-ricerca").click(function () {
         cercaFilm();
         cercaSerieTv();
-        $("#barra-ricerca").val("");
+        $("#barra-ricerca").val(""); //svuota il valore digitato nella barra di ricerca (il titolo del film). E' opzionale.
         $(".contenitore-titoli").children(".card").remove(); // così resta in vista solo la serie/saga appena cercata
     });
 
@@ -43,6 +43,7 @@ $(document).ready(function () {
     $("#barra-ricerca").keypress(function () {
         if (event.key == "Enter") {
             cercaFilm();
+            $("#barra-ricerca").val("");
         }
     });
 
@@ -62,6 +63,7 @@ $(document).ready(function () {
     $("#barra-ricerca").keypress(function () {
         if (event.key == "Enter") {
             cercaSerieTv();
+            $("#barra-ricerca").val("");
         }
     });
     
@@ -89,6 +91,7 @@ $(document).ready(function () {
             method: "GET",
             success: function (infoInArrivo) {
                 var films = infoInArrivo.results;
+                //console.log(films); //è un array di oggetti. 
                 //$(".contenitore-titoli").children(".card").remove(); // così resta in vista solo la serie/saga appena cercata
 
 
@@ -351,7 +354,7 @@ $(document).ready(function () {
                     $(".card").find(".contenitore-stelle").hide(); //così compare solo con l'hover sulla card
 
 
-                    /// RICHIESTA PER IL CAST ///
+                    /// RICHIESTA PER IL CAST DEI FILM ///
 
                     $.ajax({
                         url: apiUrlBase + "/movie/" + infoVisibiliFilm.filmId + "/credits",
@@ -372,7 +375,7 @@ $(document).ready(function () {
                                 $(".card").each(function () {
                                     var templateAttoreCompilato = templateAttore(nomeAttore);
                                     if ($(this).data("identity") == infoArrivate.id) {
-                                        console.log($(this).data("identity"), infoArrivate.id)
+                                        //console.log($(this).data("identity"), infoArrivate.id)
                                         $(templateAttoreCompilato).insertBefore($(this).find(".lingua"));
 
                                     }
