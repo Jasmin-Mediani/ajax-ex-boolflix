@@ -117,7 +117,7 @@ $(document).ready(function () {
                     }
 
                     if (film.poster_path == null) {
-                        infoVisibiliFilm.copertina = "https://www.clbdog.it/uploads/images/1551704103_no_poster.png";
+                        infoVisibiliFilm.copertina = "immagini/noimage.jpg";
                     }
 
                     //console.log(film);
